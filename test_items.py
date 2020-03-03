@@ -10,6 +10,7 @@ class TestBookStore():
     def test_button_presence(self, browser, link):
         browser.implicitly_wait(5)
         browser.get(f"{link}")
+        #time.sleep(30)
         try:
             browser.find_element(By.CSS_SELECTOR, "button.btn-add-to-basket")
         except NoSuchElementException:
